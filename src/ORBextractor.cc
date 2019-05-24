@@ -54,10 +54,13 @@
 *
 *********************************************************************/
 
-
+#include <opencv2/opencv.hpp> //adding cwj
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <vector>
+
+#include <opencv2/features2d/features2d.hpp> // adding cwj
+#include <opencv2/imgproc/imgproc.hpp> //adding cwj
 
 #include "ORBextractor.h"
 
@@ -570,7 +573,7 @@ void ORBextractor::ComputeKeyPoints(vector<vector<KeyPoint> >& allKeypoints)
                 if(hY<=0)
                     continue;
             }
-            
+
             float hX = cellW + 6;
 
             for(int j=0; j<levelCols; j++)
@@ -717,7 +720,7 @@ static void computeDescriptors(const Mat& image, vector<KeyPoint>& keypoints, Ma
 
 void ORBextractor::operator()( InputArray _image, InputArray _mask, vector<KeyPoint>& _keypoints,
                       OutputArray _descriptors)
-{ 
+{
     if(_image.empty())
         return;
 

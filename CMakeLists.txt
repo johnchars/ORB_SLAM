@@ -18,10 +18,12 @@ LIST(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake_modules)
 
 find_package(OpenCV REQUIRED)
 find_package(Eigen3 REQUIRED)
+find_package(Boost COMPONENTS system) #adding cwj
 
 include_directories(
 ${PROJECT_SOURCE_DIR}
 ${EIGEN3_INCLUDE_DIR}
+${Boost_INCLUDE_DIRS} #adding cwj
 )
 
 rosbuild_add_executable(${PROJECT_NAME}
@@ -52,5 +54,6 @@ ${OpenCV_LIBS}
 ${EIGEN3_LIBS}
 ${PROJECT_SOURCE_DIR}/Thirdparty/DBoW2/lib/libDBoW2.so
 ${PROJECT_SOURCE_DIR}/Thirdparty/g2o/lib/libg2o.so
+${Boost_LIBRARIES} # adding cwj
 )
 
