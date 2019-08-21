@@ -12,13 +12,8 @@ ROS版本：Kinect 1.12.14
 
 #### 提供脚本安装方式
 ```shell
-cd
-mkdir -p slam_ws/src && cd slam_ws/src
-catkin_init_workspace
-cd .. && catkin_make
-git clone https://github.com/johnchars/ORB_SLAM.git
-cd ORB_SLAM
-chmod +x install.bash
+# 打开 https://github.com/johnchars/ORB_SLAM
+# 下载install.bash 
 ./install.bash
 ```
 #### raulmur的readme.md 安装
