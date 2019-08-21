@@ -25,7 +25,8 @@ echo "source ~/slam_ws/devel/setup.bash" >> ~/.bashrc
 git clone https://github.com/johnchars/ORB_SLAM.git
 echo "ORB_SLAM has been clone"
 
-export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:${HOME}/slam_ws/src
+echo "export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:${HOME}/slam_ws/src"\
+  >> ~/.bashrc
 
 cd ~/slam_ws/src/ORB_SLAM/Thirdparty/g2o/
 mkdir build && cd build
