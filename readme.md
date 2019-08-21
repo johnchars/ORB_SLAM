@@ -226,7 +226,9 @@ roslaunch ExampleGroovyOrNewer.launch
 
 d. 使用Example.bag 检测安装是否成功
 
-- 下载[bag](webdiis.unizar.es/~raulmur/orbslam/downloads/Example.bag.tar.gz)文件
+- 下载http://webdiis.unizar.es/~raulmur/orbslam/downloads/Example.bag.tar.gz文件
+
+  备用链接 https://drive.google.com/file/d/0B8Qa2__-sGYgRmozQ21oRHhUZWM/view?usp=sharing
 
 - 切换到bag文件路径，这里在/home/xbot/下建立了Dataset/文件夹，并将文件放到这里
 
